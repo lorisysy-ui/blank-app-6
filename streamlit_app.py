@@ -2,8 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import koreanize_matplotlib # 한글 폰트 깨짐 방지
 from collections import Counter
+
+# 한글 폰트 설정
+plt.rcParams['font.family'] = 'DejaVu Sans'
+plt.rcParams['axes.unicode_minus'] = False
 
 # 페이지 설정
 st.set_page_config(page_title="실시간 대푯값 탐구", page_icon="📈", layout="centered")
